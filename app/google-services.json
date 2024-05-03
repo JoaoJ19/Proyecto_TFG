@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "318482942800",
+    "project_id": "proyecto-joao",
+    "storage_bucket": "proyecto-joao.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:318482942800:android:01cd35dcc60808f175ba55",
+        "android_client_info": {
+          "package_name": "com.example.proyecto"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAum9kjpeBsVrDp2uFS2wEe8k4TtdielnQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/tortuga"
+    tools:context=".IniciarSesion">
+
+
+    <!-- Para darle fondo medio oscuro -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#60000000"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <!-- Texto de 'Bienvenido' -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="¡Bienvenido otra vez!"
+        android:textColor="#FFFFFF"
+        android:textSize="17dp"
+        android:textStyle="bold"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="63dp" />
+
+    <!-- Imagen de 'Iniciar Sesión' -->
+    <ImageView
+        android:layout_width="269dp"
+        android:layout_height="62dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/iniciarsesion"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="86dp" />
+
+    <!-- Este es el inputtext para el correo -->
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="332dp"
+        android:layout_height="53dp"
+        android:background="#F3FFFFFF"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="39dp"
+        tools:layout_editor_absoluteY="350dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/emailjj"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Correo Electronico"
+            android:inputType="textEmailAddress"
+            android:textColor="#000000"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="37dp"
+            tools:layout_editor_absoluteY="299dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Este es el de la contraseña -->
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="332dp"
+        android:layout_height="53dp"
+        android:background="#F3FFFFFF"
+        app:passwordToggleEnabled="true"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="39dp"
+        tools:layout_editor_absoluteY="434dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/clavejj"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Contraseña"
+            android:inputType="textPassword"
+            android:textColor="#000000"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="37dp"
+            tools:layout_editor_absoluteY="299dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Boton de 'Registrarse' -->
+    <Button
+        android:id="@+id/entrarNuevo"
+        android:layout_width="313dp"
+        android:layout_height="49dp"
+        android:background="#FFFF00"
+        android:text="Entrar"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="49dp"
+        tools:layout_editor_absoluteY="525dp" />
+
+    <!-- Texto de 'Ya tengo una cuenta' -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="637dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Todavia no tengo cuenta "
+            android:textColor="#FFFFFF"
+            android:textSize="15dp"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/letrasRegistrarse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Registrarse"
+            android:textColor="#FFE500"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            tools:ignore="MissingConstraints" />
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

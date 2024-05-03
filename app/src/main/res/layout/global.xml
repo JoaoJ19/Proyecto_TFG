@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/loros"
+    tools:context=".MainActivity">
+
+
+    <!-- Para darle fondo medio oscuro -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#60000000"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <!-- imagen del Titulo -->
+    <ImageView
+        android:layout_width="271dp"
+        android:layout_height="78dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/titulo"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <!-- texto de guia -->
+    <TextView
+        android:layout_width="248dp"
+        android:layout_height="27dp"
+        android:text="Guía Turística de Ecuador"
+        android:textColor="#FFFFFF"
+        android:textSize="17dp"
+        android:textStyle="bold"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="7dp"
+        tools:layout_editor_absoluteY="94dp" />
+
+    <!-- imagen del escudo de Ecuador -->
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="25dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/icono"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="371dp"
+        tools:layout_editor_absoluteY="25dp" />
+
+
+    <!-- boton de Registrarse -->
+    <Button
+        android:id="@+id/BotonInicioRegistrase"
+        android:layout_width="299dp"
+        android:layout_height="46dp"
+        android:background="#FFFF00"
+        android:text="Registrarse"
+        android:textSize="20dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="56dp"
+        tools:layout_editor_absoluteY="500dp" />
+
+
+
+
+
+    <!-- boton de inicio de sesión -->
+    <Button
+        android:id="@+id/BotonIniciodeInicioSesion"
+        android:layout_width="299dp"
+        android:layout_height="46dp"
+        android:background="#FFFF00"
+        android:text="Iniciar Sesión"
+        android:textSize="20dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="56dp"
+        tools:layout_editor_absoluteY="578dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

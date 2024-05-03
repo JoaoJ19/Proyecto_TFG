@@ -2,22 +2,48 @@
 <project version="4">
   <component name="deploymentTargetDropDown">
     <value>
-      <entry key="MainActivity (1)">
+      <entry key="MainActivity">
         <State />
       </entry>
       <entry key="MainActivity (2)">
-        <State />
-      </entry>
-      <entry key="MainActivity (3)">
-        <State />
-      </entry>
-      <entry key="MainActivity (4)">
-        <State />
+        <State>
+          <targetSelectedWithDropDown>
+            <Target>
+              <type value="QUICK_BOOT_TARGET" />
+              <deviceKey>
+                <Key>
+                  <type value="VIRTUAL_DEVICE_PATH" />
+                  <value value="C:\Users\faria\.android\avd\Practica.avd" />
+                </Key>
+              </deviceKey>
+            </Target>
+          </targetSelectedWithDropDown>
+          <timeTargetWasSelectedWithDropDown value="2024-05-01T19:38:29.962497800Z" />
+        </State>
       </entry>
       <entry key="MainActivity (5)">
         <State />
       </entry>
+      <entry key="Registrarse">
+        <State />
+      </entry>
       <entry key="app">
+        <State>
+          <targetSelectedWithDropDown>
+            <Target>
+              <type value="QUICK_BOOT_TARGET" />
+              <deviceKey>
+                <Key>
+                  <type value="VIRTUAL_DEVICE_PATH" />
+                  <value value="C:\Users\faria\.android\avd\Proyecto.avd" />
+                </Key>
+              </deviceKey>
+            </Target>
+          </targetSelectedWithDropDown>
+          <timeTargetWasSelectedWithDropDown value="2024-05-01T19:29:20.257979200Z" />
+        </State>
+      </entry>
+      <entry key="reg">
         <State />
       </entry>
     </value>
