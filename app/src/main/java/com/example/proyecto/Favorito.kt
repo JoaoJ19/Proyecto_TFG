@@ -1,15 +1,14 @@
 package com.example.proyecto
 
 import android.os.Bundle
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
-import com.example.proyecto.databinding.FragmentInicioBinding
+import com.example.proyecto.databinding.FragmentFavoBinding
 
-class Inicio : Fragment() {
-
-    private var _binding: FragmentInicioBinding? = null
+class Favorito : Fragment() {
+    private var _binding: FragmentFavoBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -18,7 +17,7 @@ class Inicio : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.activity_dentro, container, false)
+        return inflater.inflate(R.layout.fragment_favo, container, false)
     }
 
     override fun onDestroyView() {

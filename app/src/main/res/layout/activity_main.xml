@@ -4,80 +4,82 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/loro"
+    android:background="@drawable/fondo"
     tools:context=".MainActivity">
 
-
-    <!-- Para darle fondo medio oscuro -->
     <View
+        android:id="@+id/view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#60000000"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp" />
+        android:background="#40000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
-    <!-- imagen del Titulo -->
     <ImageView
+        android:id="@+id/titulo_image"
         android:layout_width="271dp"
         android:layout_height="78dp"
+        android:layout_marginTop="76dp"
         android:adjustViewBounds="true"
         android:scaleType="centerCrop"
         android:src="@drawable/titulo"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="16dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- texto de guia -->
     <TextView
-        android:layout_width="248dp"
-        android:layout_height="27dp"
+        android:id="@+id/guia_texto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:text="Guía Turística de Ecuador"
         android:textColor="#FFFFFF"
         android:textSize="17dp"
         android:textStyle="bold"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="7dp"
-        tools:layout_editor_absoluteY="94dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titulo_image" />
 
-    <!-- imagen del escudo de Ecuador -->
     <ImageView
+        android:id="@+id/escudo_image"
         android:layout_width="24dp"
         android:layout_height="25dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="16dp"
         android:adjustViewBounds="true"
         android:scaleType="centerCrop"
         android:src="@drawable/icono"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="371dp"
-        tools:layout_editor_absoluteY="25dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
-    <!-- boton de Registrarse -->
     <Button
         android:id="@+id/BotonInicioRegistrase"
         android:layout_width="299dp"
-        android:layout_height="46dp"
-        android:background="#FFFF00"
+        android:layout_height="60dp"
+        android:layout_marginBottom="144dp"
+        android:backgroundTint="#F30B0B"
         android:text="Registrarse"
         android:textSize="20dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="56dp"
-        tools:layout_editor_absoluteY="500dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-
-
-
-
-    <!-- boton de inicio de sesión -->
     <Button
         android:id="@+id/BotonIniciodeInicioSesion"
         android:layout_width="299dp"
-        android:layout_height="46dp"
-        android:background="#FFFF00"
+        android:layout_height="60dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#0567FB"
         android:text="Iniciar Sesión"
         android:textSize="20dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="56dp"
-        tools:layout_editor_absoluteY="578dp" />
-
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/BotonInicioRegistrase" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,113 +4,131 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/loro"
+    android:background="@drawable/fondo_rr"
     tools:context=".Registrarse">
 
-    <!-- Para darle fondo medio oscuro -->
     <View
+        android:id="@+id/fondoR"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#60000000"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp" />
+        android:background="#40000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
 
-    <!-- Texto de 'Bienvenido' -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="¡Bienvenido!"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="64dp"
+        android:text="¡Bienvenido por primera vez!"
         android:textColor="#FFFFFF"
         android:textSize="17dp"
         android:textStyle="bold"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="51dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
 
-    <!-- Imagen de 'Registrate' -->
     <ImageView
-        android:layout_width="236dp"
-        android:layout_height="66dp"
+        android:layout_width="269dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="84dp"
         android:adjustViewBounds="true"
         android:scaleType="centerCrop"
         android:src="@drawable/registrate"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="86dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
 
-    <!-- Este es el inputtext para el correo -->
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/correoR"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="332dp"
-        android:layout_height="53dp"
-        android:background="#F3FFFFFF"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="39dp"
-        tools:layout_editor_absoluteY="350dp">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Correo Electronico"
-            android:inputType="textEmailAddress"
-            android:textColor="#000000"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="37dp"
-            tools:layout_editor_absoluteY="299dp" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <!-- Este es el de la contraseña -->
-    <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="332dp"
-        android:layout_height="53dp"
-        android:background="#F3FFFFFF"
-        app:passwordToggleEnabled="true"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="39dp"
-        tools:layout_editor_absoluteY="434dp">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:hint="Contraseña"
-            android:inputType="textPassword"
-            android:textColor="#000000"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="37dp"
-            tools:layout_editor_absoluteY="299dp" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <!-- Boton de 'Registrarse' -->
-    <Button
-        android:id="@+id/registrarse"
-        android:layout_width="313dp"
-        android:layout_height="49dp"
-        android:text="Registrarse"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="49dp"
-        tools:layout_editor_absoluteY="525dp" />
-
-    <!-- Texto de 'Ya tengo una cuenta' -->
-    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="horizontal"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="637dp">
+        android:layout_marginStart="36dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="268dp"
+        android:textColorHint="#FFFFFF"
+        app:hintTextColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/fondoR"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/emailjj"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#59BFBFBF"
+            android:hint="Correo Electronico"
+            android:inputType="textEmailAddress"
+            android:textColor="#FFFFFF"
+            tools:ignore="MissingConstraints" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/contrasenaR"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginTop="16dp"
+        android:textColorHint="#FFFFFF"
+        app:hintTextColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/correoR"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="#FFFFFF"
+        tools:ignore="MissingConstraints">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/clavejj"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#59BFBFBF"
+            android:hint="Contraseña"
+            android:inputType="textPassword"
+            android:textColor="#FFFFFF"
+            tools:ignore="MissingConstraints" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/registrarse"
+        android:layout_width="332dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="36dp"
+        android:backgroundTint="#FB0505"
+        android:text="Registrarse"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contrasenaR"
+        tools:ignore="MissingConstraints" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/registrarse"
+        tools:ignore="MissingConstraints">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Todavia no tengo cuenta "
+            android:text="¡Ya tengo una cuenta!"
             android:textColor="#FFFFFF"
             android:textSize="15dp"
             tools:ignore="MissingConstraints" />
@@ -119,12 +137,11 @@
             android:id="@+id/entrarnuevo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=" Registrarse"
-            android:textColor="#FFE500"
+            android:text=" Iniciar Sesion"
+            android:textColor="#0567FB"
             android:textSize="15dp"
             android:textStyle="bold"
             tools:ignore="MissingConstraints" />
-
 
     </LinearLayout>
 

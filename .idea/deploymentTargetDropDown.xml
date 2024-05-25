@@ -2,6 +2,25 @@
 <project version="4">
   <component name="deploymentTargetDropDown">
     <value>
+      <entry key="Dentro">
+        <State />
+      </entry>
+      <entry key="Home">
+        <State>
+          <runningDeviceTargetSelectedWithDropDown>
+            <Target>
+              <type value="RUNNING_DEVICE_TARGET" />
+              <deviceKey>
+                <Key>
+                  <type value="SERIAL_NUMBER" />
+                  <value value="adb-R3CT30QQKKK-3mWjD7._adb-tls-connect._tcp" />
+                </Key>
+              </deviceKey>
+            </Target>
+          </runningDeviceTargetSelectedWithDropDown>
+          <timeTargetWasSelectedWithDropDown value="2024-05-15T11:39:21.690508300Z" />
+        </State>
+      </entry>
       <entry key="MainActivity">
         <State />
       </entry>
@@ -21,12 +40,6 @@
           <timeTargetWasSelectedWithDropDown value="2024-05-01T19:38:29.962497800Z" />
         </State>
       </entry>
-      <entry key="MainActivity (5)">
-        <State />
-      </entry>
-      <entry key="Registrarse">
-        <State />
-      </entry>
       <entry key="app">
         <State>
           <targetSelectedWithDropDown>
@@ -40,7 +53,7 @@
               </deviceKey>
             </Target>
           </targetSelectedWithDropDown>
-          <timeTargetWasSelectedWithDropDown value="2024-05-01T19:29:20.257979200Z" />
+          <timeTargetWasSelectedWithDropDown value="2024-05-23T19:10:03.856846800Z" />
         </State>
       </entry>
       <entry key="reg">

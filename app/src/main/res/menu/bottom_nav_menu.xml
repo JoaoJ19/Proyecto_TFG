@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/boton_inicio"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="@string/titulo_inicio" />
+
+    <item
+        android:id="@+id/boton_favoritos"
+        android:icon="@drawable/favorito"
+        android:title="@string/titulo_favoritos" />
+
+    <item
+        android:id="@+id/boto"
+        android:icon="@drawable/cuenta"
+        android:title="@string/titulo_cuenta" />
+
+</menu>

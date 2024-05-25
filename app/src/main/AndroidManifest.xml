@@ -6,25 +6,52 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/logo_dos"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/logo_dos_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Proyecto"
         tools:targetApi="31">
         <activity
-            android:name=".IniciarSesion" />
+            android:name=".otroInicio"
+            android:exported="false" />
         <activity
-            android:name=".Registrarse"/>
+            android:name=".InicioPruebita"
+            android:exported="false" />
+        <activity
+            android:name=".CuentaPruebita"
+            android:exported="false" />
+        <activity
+            android:name=".pruebitaIniciooo"
+            android:exported="false" />
+        <activity
+            android:name=".pruebaInicio"
+            android:exported="false"
+            android:label="@string/title_activity_prueba_inicio"
+            android:theme="@style/Theme.Proyecto" />
+        <activity
+            android:name=".CuentaNuevo"
+            android:exported="false" />
+        <activity
+            android:name=".FavoritoNuevo"
+            android:exported="false" />
+        <activity
+            android:name=".InicioNuevo"
+            android:exported="false" />
+        <activity
+            android:name=".Dentro"
+            android:exported="false" />
+        <activity android:name=".IniciarSesion" />
+        <activity android:name=".Registrarse" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>
