@@ -51,7 +51,7 @@ class IniciarSesion : AppCompatActivity() {
                 .addOnCompleteListener { task ->
                     if (task.isSuccessful) {
                         Toast.makeText(this@IniciarSesion, "Iniciando sesión", Toast.LENGTH_SHORT).show()
-                        val intent = Intent(this@IniciarSesion, CuentaPruebita::class.java).apply {
+                        val intent = Intent(this@IniciarSesion, Cuenta::class.java).apply {
                             putExtra("email", email)  // Aquí se pasa el correo electrónico
                             putExtra("password", clave)  // Aquí se pasa la contraseña
                         }

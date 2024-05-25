@@ -3,9 +3,9 @@ package com.example.proyecto
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
-class InicioPruebita : AppCompatActivity() {
+class LugaresCosta : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_inicio_pruebita)
+        setContentView(R.layout.activity_lugares_costa)
     }
 }

@@ -13,34 +13,16 @@
         android:theme="@style/Theme.Proyecto"
         tools:targetApi="31">
         <activity
-            android:name=".otroInicio"
+            android:name=".Inicio"
             android:exported="false" />
         <activity
-            android:name=".InicioPruebita"
+            android:name=".LugaresCosta"
             android:exported="false" />
         <activity
-            android:name=".CuentaPruebita"
+            android:name=".Cuenta"
             android:exported="false" />
         <activity
-            android:name=".pruebitaIniciooo"
-            android:exported="false" />
-        <activity
-            android:name=".pruebaInicio"
-            android:exported="false"
-            android:label="@string/title_activity_prueba_inicio"
-            android:theme="@style/Theme.Proyecto" />
-        <activity
-            android:name=".CuentaNuevo"
-            android:exported="false" />
-        <activity
-            android:name=".FavoritoNuevo"
-            android:exported="false" />
-        <activity
-            android:name=".InicioNuevo"
-            android:exported="false" />
-        <activity
-            android:name=".Dentro"
-            android:exported="false" />
+            android:name=".Dentro"/>
         <activity android:name=".IniciarSesion" />
         <activity android:name=".Registrarse" />
         <activity

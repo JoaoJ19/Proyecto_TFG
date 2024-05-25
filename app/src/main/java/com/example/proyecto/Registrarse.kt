@@ -71,7 +71,7 @@ class Registrarse : AppCompatActivity() {
                                 Log.d(TAG, "Ocurrió un error: $it")
                             }
 
-                        val intent = Intent(this@Registrarse, CuentaPruebita::class.java).apply {
+                        val intent = Intent(this@Registrarse, Cuenta::class.java).apply {
                             putExtra("email", email)
                             putExtra("password", clave)
                         }

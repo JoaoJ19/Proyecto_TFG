@@ -8,7 +8,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 
-class CuentaPruebita : AppCompatActivity() {
+class Cuenta : AppCompatActivity() {
     private lateinit var emailTextView: TextView
     private lateinit var passwordTextView: TextView
     private lateinit var nombreTexto: TextView
@@ -17,7 +17,7 @@ class CuentaPruebita : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_cuenta_pruebita)
+        setContentView(R.layout.activity_cuenta)
 
         emailTextView = findViewById(R.id.elcorreo)
         passwordTextView = findViewById(R.id.lacontrasena)
@@ -42,7 +42,7 @@ class CuentaPruebita : AppCompatActivity() {
             .setPositiveButton("Sí") { dialog, id ->
                 // Cerrar sesión y volver a MainActivity
                 firebaseAuth.signOut()
-                val intent = Intent(this@CuentaPruebita, MainActivity::class.java)
+                val intent = Intent(this@Cuenta, MainActivity::class.java)
                 intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                 startActivity(intent)
                 finish()
