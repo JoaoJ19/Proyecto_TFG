@@ -37,6 +37,7 @@ class Registrarse : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
+
         registrarse.setOnClickListener {
             val email = editarTextoEmail.text.toString()
             val clave = editarTextoClave.text.toString()
@@ -50,11 +51,11 @@ class Registrarse : AppCompatActivity() {
                 Toast.makeText(this@Registrarse, "Introduzca la Clave", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
+
             firebaseAuth.createUserWithEmailAndPassword(email, clave)
                 .addOnCompleteListener { task ->
                     if (task.isSuccessful) {
-                        Toast.makeText(this@Registrarse, "Usuario Registrado", Toast.LENGTH_SHORT)
-                            .show()
+                        Toast.makeText(this@Registrarse, "Usuario Registrado", Toast.LENGTH_SHORT).show()
                         val userId = firebaseAuth.currentUser?.uid
                         val userEmail = firebaseAuth.currentUser?.email
 
@@ -62,6 +63,7 @@ class Registrarse : AppCompatActivity() {
                             id = userId.toString(),
                             name = nombre
                         ).toMap()
+
                         FirebaseFirestore.getInstance().collection("users")
                             .document(userEmail.toString())
                             .set(user)
@@ -71,15 +73,14 @@ class Registrarse : AppCompatActivity() {
                                 Log.d(TAG, "Ocurrió un error: $it")
                             }
 
-                        val intent = Intent(this@Registrarse, Cuenta::class.java).apply {
+                        val intent = Intent(this@Registrarse, MainActivity2::class.java).apply {
                             putExtra("email", email)
                             putExtra("password", clave)
                         }
                         startActivity(intent)
                         finish()
                     } else {
-                        Toast.makeText(this@Registrarse, "Error al Registrarse", Toast.LENGTH_SHORT)
-                            .show()
+                        Toast.makeText(this@Registrarse, "Error al Registrarse", Toast.LENGTH_SHORT).show()
                     }
                 }
         }

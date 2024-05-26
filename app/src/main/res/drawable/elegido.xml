@@ -1,8 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+<!-- selector_item_icon_tint.xml -->
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-
-    <item android:state_pressed="true" android:color="#000000"/>
-    <item android:state_pressed="true" android:color="#000000"/>
-    <item android:color="#C3B9B9"/>
-
+    <!-- Estado cuando el elemento está seleccionado -->
+    <item android:state_checked="true" android:color="#000000"/>
+    <!-- Estado por defecto -->
+    <item android:color="#0249FD"/> <!-- Color por defecto -->
 </selector>

@@ -21,7 +21,7 @@
           <timeTargetWasSelectedWithDropDown value="2024-05-15T11:39:21.690508300Z" />
         </State>
       </entry>
-      <entry key="MainActivity">
+      <entry key="MainActivity (1)">
         <State />
       </entry>
       <entry key="MainActivity (2)">
@@ -40,6 +40,12 @@
           <timeTargetWasSelectedWithDropDown value="2024-05-01T19:38:29.962497800Z" />
         </State>
       </entry>
+      <entry key="MainActivity2">
+        <State />
+      </entry>
+      <entry key="MainActivity2 (1)">
+        <State />
+      </entry>
       <entry key="app">
         <State>
           <targetSelectedWithDropDown>
@@ -55,9 +61,6 @@
           </targetSelectedWithDropDown>
           <timeTargetWasSelectedWithDropDown value="2024-05-23T19:10:03.856846800Z" />
         </State>
-      </entry>
-      <entry key="reg">
-        <State />
       </entry>
     </value>
   </component>
