@@ -13,9 +13,9 @@
 
     <fragment
         android:id="@+id/navegacion_favoritos"
-        android:name="com.example.proyecto.ui.dashboard.DashboardFragment"
+        android:name="com.example.proyecto.ventanas.Favoritos"
         android:label="@string/titulo_favoritos"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/activity_favorito" />
 
     <fragment
         android:id="@+id/navegacion_cuenta"

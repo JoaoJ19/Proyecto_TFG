@@ -13,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.proyecto.pruebasMenu.User
 import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseAuthUserCollisionException
 import com.google.firebase.firestore.FirebaseFirestore
 
 class Registrarse : AppCompatActivity() {
@@ -69,8 +70,8 @@ class Registrarse : AppCompatActivity() {
                             .set(user)
                             .addOnSuccessListener {
                                 Log.d(TAG, "Usuario creado en la base de datos")
-                            }.addOnFailureListener {
-                                Log.d(TAG, "Ocurrió un error: $it")
+                            }.addOnFailureListener { exception ->
+                                Log.d(TAG, "Ocurrió un error: $exception")
                             }
 
                         val intent = Intent(this@Registrarse, MainActivity2::class.java).apply {
@@ -80,7 +81,11 @@ class Registrarse : AppCompatActivity() {
                         startActivity(intent)
                         finish()
                     } else {
-                        Toast.makeText(this@Registrarse, "Error al Registrarse", Toast.LENGTH_SHORT).show()
+                        if (task.exception is FirebaseAuthUserCollisionException) {
+                            Toast.makeText(this@Registrarse, "El correo electrónico ya está en uso por otra cuenta", Toast.LENGTH_SHORT).show()
+                        } else {
+                            Toast.makeText(this@Registrarse, "Error al Registrarse: ${task.exception?.message}", Toast.LENGTH_SHORT).show()
+                        }
                     }
                 }
         }

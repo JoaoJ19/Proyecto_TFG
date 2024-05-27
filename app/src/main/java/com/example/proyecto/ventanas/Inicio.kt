@@ -9,6 +9,7 @@ import androidx.cardview.widget.CardView
 import androidx.fragment.app.Fragment
 import com.example.proyecto.R
 import com.example.proyecto.zonas.LugaresCosta
+import com.example.proyecto.zonas.RestauranteCosta
 
 class Inicio : Fragment() {
 
@@ -18,16 +19,16 @@ class Inicio : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.activity_inicio, container, false)
 
-        val naturalRecipesCardView: CardView = view.findViewById(R.id.monumentosCosta)
-        val snackRecipesCardView: CardView = view.findViewById(R.id.restaurantesCosta)
+        val monumentosCostita: CardView = view.findViewById(R.id.monumentosCosta)
+        val restauranCosta: CardView = view.findViewById(R.id.restaurantesCosta)
 
-        naturalRecipesCardView.setOnClickListener {
+        monumentosCostita.setOnClickListener {
             val intent = Intent(activity, LugaresCosta::class.java)
             startActivity(intent)
         }
 
-        snackRecipesCardView.setOnClickListener {
-            val intent = Intent(activity, LugaresCosta::class.java)
+        restauranCosta.setOnClickListener {
+            val intent = Intent(activity, RestauranteCosta::class.java)
             startActivity(intent)
         }
 

@@ -91,7 +91,7 @@
                         android:src="@drawable/monumentocost" />
 
                     <TextView
-                        android:id="@+id/naturalRecipesTextView"
+                        android:id="@+id/texttoMonumentosCosta"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
