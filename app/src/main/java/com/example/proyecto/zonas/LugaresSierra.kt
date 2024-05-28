@@ -9,24 +9,24 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.squareup.picasso.Picasso
 
-class LugaresCosta : AppCompatActivity() {
+class LugaresSierra : AppCompatActivity() {
 
     private val dbFirestore = FirebaseFirestore.getInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_lugares_prueba)
+        setContentView(R.layout.activity_lugares_sierra)
 
-        val linearLayout = findViewById<LinearLayout>(R.id.todorestcost)
+        val linearLayout = findViewById<LinearLayout>(R.id.todosi)
 
         // Consultar las ciudades desde Firestore
-        dbFirestore.collection("ciudades")
+        dbFirestore.collection("csierra")
             .get()
             .addOnSuccessListener { documents ->
                 for (document in documents) {
                     val ciudad = document.toObject(Ciudad::class.java)
 
-                    // Crear un nuevo layout para cada ciudad
+                    // Crear un nuevo layout para cada csierra
                     val itemLayout =
                         layoutInflater.inflate(R.layout.item_ciudad, null) as LinearLayout
 
@@ -60,13 +60,14 @@ class LugaresCosta : AppCompatActivity() {
             }
             .addOnFailureListener { exception ->
                 // Manejar errores de la consulta
+                Toast.makeText(this, "Error al obtener datos: ${exception.message}", Toast.LENGTH_SHORT).show()
             }
     }
 
     private fun guardarCiudadFavorita(ciudad: Ciudad) {
         val userId = FirebaseAuth.getInstance().currentUser?.uid
         if (userId != null) {
-            dbFirestore.collection("usuarios").document(userId).collection("favoritos")
+            dbFirestore.collection("usuarios").document(userId).collection("favoritosCSierra")
                 .document(ciudad.id_ciudad)
                 .set(ciudad)
                 .addOnSuccessListener {
@@ -85,4 +86,3 @@ class LugaresCosta : AppCompatActivity() {
         }
     }
 }
-

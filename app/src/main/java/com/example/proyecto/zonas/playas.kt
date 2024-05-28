@@ -2,25 +2,28 @@ package com.example.proyecto.zonas
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.*
+import android.widget.ImageButton
+import android.widget.ImageView
+import android.widget.LinearLayout
+import android.widget.TextView
+import android.widget.Toast
 import com.example.proyecto.R
 import com.example.proyecto.pruebasMenu.Ciudad
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.squareup.picasso.Picasso
 
-class LugaresCosta : AppCompatActivity() {
-
+class playas : AppCompatActivity() {
     private val dbFirestore = FirebaseFirestore.getInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_lugares_prueba)
+        setContentView(R.layout.activity_playas)
 
-        val linearLayout = findViewById<LinearLayout>(R.id.todorestcost)
+        val linearLayout = findViewById<LinearLayout>(R.id.todoplayas)
 
         // Consultar las ciudades desde Firestore
-        dbFirestore.collection("ciudades")
+        dbFirestore.collection("playas")
             .get()
             .addOnSuccessListener { documents ->
                 for (document in documents) {
@@ -66,11 +69,11 @@ class LugaresCosta : AppCompatActivity() {
     private fun guardarCiudadFavorita(ciudad: Ciudad) {
         val userId = FirebaseAuth.getInstance().currentUser?.uid
         if (userId != null) {
-            dbFirestore.collection("usuarios").document(userId).collection("favoritos")
+            dbFirestore.collection("usuarios").document(userId).collection("favoritosPlayas")
                 .document(ciudad.id_ciudad)
                 .set(ciudad)
                 .addOnSuccessListener {
-                    Toast.makeText(this, "Ciudad agregada a favoritos", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "Playa agregada a favoritos", Toast.LENGTH_SHORT).show()
                 }
                 .addOnFailureListener { exception ->
                     // Manejar errores al guardar la ciudad favorita

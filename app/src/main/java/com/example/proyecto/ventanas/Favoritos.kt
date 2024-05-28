@@ -11,7 +11,6 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.proyecto.R
-import com.example.proyecto.pruebasMenu.Ciudad
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.squareup.picasso.Picasso
@@ -34,10 +33,13 @@ class Favoritos : Fragment() {
         val userId = FirebaseAuth.getInstance().currentUser?.uid
 
         if (userId != null) {
-            // Consultar favoritos de monumentos
+            // Consultar favoritos de diferentes colecciones
             consultarFavoritos("favoritos", userId, linearLayout)
-            // Consultar favoritos de restaurantes
             consultarFavoritos("favoritosrest", userId, linearLayout)
+            consultarFavoritos("favoritosCSierra", userId, linearLayout)
+            consultarFavoritos("favoritosRestSierra", userId, linearLayout)
+            consultarFavoritos("favoritosPlayas", userId, linearLayout)
+            consultarFavoritos("favoritosRestPlayas", userId, linearLayout)
         } else {
             Toast.makeText(context, "Usuario no autenticado", Toast.LENGTH_SHORT).show()
         }
@@ -83,7 +85,7 @@ class Favoritos : Fragment() {
                         }
 
                     imageButton.setOnClickListener {
-                        toggleFavorite(document.id, userId, coleccion, imageButton)
+                        toggleFavorite(document.id, userId, coleccion, imageButton, itemLayout, linearLayout)
                     }
 
                     linearLayout.addView(itemLayout)
@@ -102,7 +104,9 @@ class Favoritos : Fragment() {
         documentoId: String,
         userId: String,
         coleccion: String,
-        imageButton: ImageButton
+        imageButton: ImageButton,
+        itemLayout: LinearLayout,
+        linearLayout: LinearLayout
     ) {
         val favoritosRef =
             dbFirestore.collection("usuarios").document(userId).collection(coleccion)
@@ -113,7 +117,7 @@ class Favoritos : Fragment() {
                 // Si ya está en favoritos, eliminarlo
                 favoritosRef.delete()
                     .addOnSuccessListener {
-                        imageButton.setImageResource(R.drawable.corazon_vacio)
+                        linearLayout.removeView(itemLayout)  // Eliminar el layout del elemento de la vista
                         Toast.makeText(context, "Eliminado de favoritos", Toast.LENGTH_SHORT)
                             .show()
                     }
@@ -126,7 +130,7 @@ class Favoritos : Fragment() {
                     }
             } else {
                 // Si no está en favoritos, agregarlo
-                favoritosRef.set(document)
+                favoritosRef.set(document.data!!)
                     .addOnSuccessListener {
                         imageButton.setImageResource(R.drawable.relleno)
                         Toast.makeText(context, "Añadido a favoritos", Toast.LENGTH_SHORT)
