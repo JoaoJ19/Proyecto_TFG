@@ -13,3 +13,7 @@ EcuTour se erige como una guía turística esencial para explorar Ecuador, un pa
 - 👔 **Perfil de Usuario:** VIsualizar tu perfil con información relevante como tu nombre, correo electronico y la contraseña con la que accedes.
 
 # Guía de la aplicación
+### - Iniciar Sesión o Crear tu cuenta
+### - Iniciar Sesión o Crear tu cuenta
+### - Iniciar Sesión o Crear tu cuenta
+### - Iniciar Sesión o Crear tu cuenta
