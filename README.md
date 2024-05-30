@@ -14,6 +14,8 @@ EcuTour se erige como una guía turística esencial para explorar Ecuador, un pa
 
 # Guía de la aplicación
 ### - Iniciar Sesión o Crear tu cuenta
+![Captura de pantalla 2024-05-30 173601](https://github.com/JoaoJ19/Proyecto_TFG/assets/99200647/0b239476-05fa-45fa-9f43-5fa1918a2cba)
+
 ### - Iniciar Sesión o Crear tu cuenta
 ### - Iniciar Sesión o Crear tu cuenta
 ### - Iniciar Sesión o Crear tu cuenta
