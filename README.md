@@ -38,4 +38,7 @@ Aquí se alojan los monumentos, restaurantes o playas que hemos dado like para t
 
 ![favoritos](https://github.com/JoaoJ19/Proyecto_TFG/assets/99200647/f8c64435-b356-4525-9292-340cddd507b3)
 
+### - Video de la aplicación en funcionamiento.
+[https://youtu.be/lFLEEkYYVZk](https://youtu.be/lFLEEkYYVZk)
+
 _Y con todo dicho sobre el proyecto gracias por su interés. ¡Coge el primer vuelo para ir a conocer este lindo país y sus riquezas que ofrece tanto culinariamente como visualmente con sus bellos lugares! GRACIAS_
