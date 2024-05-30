@@ -30,7 +30,8 @@
             <TextView
                 android:id="@+id/titulo_restCosta"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="62dp"
+                android:paddingTop="13dp"
                 android:text="TextView"
                 android:textAlignment="center"
                 android:textColor="@color/white"
@@ -40,7 +41,7 @@
             <TextView
                 android:id="@+id/descripcion_restCosta"
                 android:layout_width="match_parent"
-                android:layout_height="64dp"
+                android:layout_height="49dp"
                 android:text="TextView"
                 android:textAlignment="center"
                 android:textColor="@color/white"
@@ -51,7 +52,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="9dp"
+                android:layout_marginRight="8dp"
                 android:background="@android:color/transparent"
                 android:src="@drawable/corazon_vacio" />
         </LinearLayout>

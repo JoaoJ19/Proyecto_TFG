@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">EcuaTour</string>
-    <string name="titulo_inicio">Home</string>
+    <string name="titulo_inicio">Inicio</string>
     <string name="titulo_favoritos">Favoritos</string>
     <string name="titulo_cuenta">Cuenta</string>
 

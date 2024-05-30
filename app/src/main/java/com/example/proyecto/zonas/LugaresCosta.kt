@@ -1,8 +1,12 @@
 package com.example.proyecto.zonas
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.*
+import android.widget.ImageButton
+import android.widget.ImageView
+import android.widget.LinearLayout
+import android.widget.TextView
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.example.proyecto.R
 import com.example.proyecto.pruebasMenu.Ciudad
 import com.google.firebase.auth.FirebaseAuth
@@ -15,7 +19,7 @@ class LugaresCosta : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_lugares_prueba)
+        setContentView(R.layout.activity_lugares_costa)
 
         val linearLayout = findViewById<LinearLayout>(R.id.todorestcost)
 
@@ -45,21 +49,37 @@ class LugaresCosta : AppCompatActivity() {
                     tituloTextView.text = ciudad.nombre
                     descripcionTextView.text = ciudad.descripcion
 
+                    // Configurar la imagen inicial del ImageButton
+                    imageButton.setImageResource(R.drawable.corazon_vacio)
+
                     // Agregar el layout de la ciudad al LinearLayout principal
                     linearLayout.addView(itemLayout)
 
                     // Agregar un OnClickListener al botón de laikesito
                     imageButton.setOnClickListener {
-                        // Aquí puedes guardar la ciudad favorita en Firestore
-                        // Por ejemplo, podrías guardar el ID de la ciudad en la colección de favoritos del usuario actual
-                        // Puedes obtener el ID de la ciudad usando ciudad.id_ciudad
-                        // Y el ID del usuario actual usando FirebaseAuth.getInstance().currentUser?.uid
-                        guardarCiudadFavorita(ciudad)
+                        // Cambiar la imagen del ImageButton
+                        if (imageButton.tag == "no_favorito") {
+                            imageButton.setImageResource(R.drawable.relleno)
+                            imageButton.tag = "favorito"
+                            guardarCiudadFavorita(ciudad)
+                        } else {
+                            imageButton.setImageResource(R.drawable.corazon_vacio)
+                            imageButton.tag = "no_favorito"
+                            eliminarCiudadFavorita(ciudad)
+                        }
                     }
+
+                    // Establecer el tag inicial del ImageButton
+                    imageButton.tag = "no_favorito"
                 }
             }
             .addOnFailureListener { exception ->
                 // Manejar errores de la consulta
+                Toast.makeText(
+                    this,
+                    "Error al obtener ciudades: ${exception.message}",
+                    Toast.LENGTH_SHORT
+                ).show()
             }
     }
 
@@ -84,5 +104,26 @@ class LugaresCosta : AppCompatActivity() {
             Toast.makeText(this, "Usuario no autenticado", Toast.LENGTH_SHORT).show()
         }
     }
-}
 
+    private fun eliminarCiudadFavorita(ciudad: Ciudad) {
+        val userId = FirebaseAuth.getInstance().currentUser?.uid
+        if (userId != null) {
+            dbFirestore.collection("usuarios").document(userId).collection("favoritos")
+                .document(ciudad.id_ciudad)
+                .delete()
+                .addOnSuccessListener {
+                    Toast.makeText(this, "Ciudad eliminada de favoritos", Toast.LENGTH_SHORT).show()
+                }
+                .addOnFailureListener { exception ->
+                    // Manejar errores al eliminar la ciudad favorita
+                    Toast.makeText(
+                        this,
+                        "Error al eliminar de favoritos: ${exception.message}",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
+        } else {
+            Toast.makeText(this, "Usuario no autenticado", Toast.LENGTH_SHORT).show()
+        }
+    }
+}

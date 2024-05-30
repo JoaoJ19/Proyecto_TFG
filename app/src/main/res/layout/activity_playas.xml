@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".zonas.playas">
 
     <androidx.core.widget.NestedScrollView
@@ -18,6 +19,19 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tituloRestaurantes"
+                android:layout_width="match_parent"
+                android:layout_height="73dp"
+                android:background="#FFB592"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="Las mejores playas"
+                android:textColor="@color/black"
+                android:textSize="23sp"
+                android:textStyle="bold" />
+
 
             <Space
                 android:layout_width="match_parent"

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".zonas.RestauranteCosta">
 
     <androidx.core.widget.NestedScrollView
@@ -12,12 +13,25 @@
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="0dp">
 
+
         <LinearLayout
             android:id="@+id/todorestcost"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
+            android:layout_marginTop="15dp"
             android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tituloRestaurantes"
+                android:layout_width="match_parent"
+                android:layout_height="73dp"
+                android:background="#86BEFA"
+                android:gravity="center"
+                android:text="Lista de Restaurantes de las costas"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
             <Space
                 android:layout_width="match_parent"

@@ -56,8 +56,20 @@ class RestaurantesSierra : AppCompatActivity() {
 
                     // Agregar un OnClickListener al botón de laikesito
                     imageButton.setOnClickListener {
-                        guardarRestauranteFavorito(restaurante)
+                        // Cambiar la imagen del ImageButton
+                        if (imageButton.tag == "no_favorito") {
+                            imageButton.setImageResource(R.drawable.relleno)
+                            imageButton.tag = "favorito"
+                            guardarRestauranteFavorito(restaurante)
+                        } else {
+                            imageButton.setImageResource(R.drawable.corazon_vacio)
+                            imageButton.tag = "no_favorito"
+                            eliminarRestauranteFavorito(restaurante)
+                        }
                     }
+
+                    // Establecer el tag inicial del ImageButton
+                    imageButton.tag = "no_favorito"
                 }
             }
             .addOnFailureListener { exception ->
@@ -81,6 +93,28 @@ class RestaurantesSierra : AppCompatActivity() {
                     Toast.makeText(
                         this,
                         "Error al agregar a favoritos: ${exception.message}",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
+        } else {
+            Toast.makeText(this, "Usuario no autenticado", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    private fun eliminarRestauranteFavorito(restaurante: Restaurante) {
+        val userId = FirebaseAuth.getInstance().currentUser?.uid
+        if (userId != null) {
+            dbFirestore.collection("usuarios").document(userId).collection("favoritosrest")
+                .document(restaurante.id_rest.toString())
+                .delete()
+                .addOnSuccessListener {
+                    Toast.makeText(this, "Restaurante eliminado de favoritos", Toast.LENGTH_SHORT).show()
+                }
+                .addOnFailureListener { exception ->
+                    // Manejar errores al eliminar el restaurante favorito
+                    Toast.makeText(
+                        this,
+                        "Error al eliminar de favoritos: ${exception.message}",
                         Toast.LENGTH_SHORT
                     ).show()
                 }

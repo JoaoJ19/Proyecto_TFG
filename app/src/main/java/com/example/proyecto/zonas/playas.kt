@@ -1,12 +1,12 @@
 package com.example.proyecto.zonas
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.example.proyecto.R
 import com.example.proyecto.pruebasMenu.Ciudad
 import com.google.firebase.auth.FirebaseAuth
@@ -53,16 +53,29 @@ class playas : AppCompatActivity() {
 
                     // Agregar un OnClickListener al botón de laikesito
                     imageButton.setOnClickListener {
-                        // Aquí puedes guardar la ciudad favorita en Firestore
-                        // Por ejemplo, podrías guardar el ID de la ciudad en la colección de favoritos del usuario actual
-                        // Puedes obtener el ID de la ciudad usando ciudad.id_ciudad
-                        // Y el ID del usuario actual usando FirebaseAuth.getInstance().currentUser?.uid
-                        guardarCiudadFavorita(ciudad)
+                        // Cambiar la imagen del ImageButton
+                        if (imageButton.tag == "no_favorito") {
+                            imageButton.setImageResource(R.drawable.relleno)
+                            imageButton.tag = "favorito"
+                            guardarCiudadFavorita(ciudad)
+                        } else {
+                            imageButton.setImageResource(R.drawable.corazon_vacio)
+                            imageButton.tag = "no_favorito"
+                            eliminarCiudadFavorita(ciudad)
+                        }
                     }
+
+                    // Establecer el tag inicial del ImageButton
+                    imageButton.tag = "no_favorito"
                 }
             }
             .addOnFailureListener { exception ->
                 // Manejar errores de la consulta
+                Toast.makeText(
+                    this,
+                    "Error al obtener playa: ${exception.message}",
+                    Toast.LENGTH_SHORT
+                ).show()
             }
     }
 
@@ -87,5 +100,27 @@ class playas : AppCompatActivity() {
             Toast.makeText(this, "Usuario no autenticado", Toast.LENGTH_SHORT).show()
         }
     }
-}
 
+
+    private fun eliminarCiudadFavorita(ciudad: Ciudad) {
+        val userId = FirebaseAuth.getInstance().currentUser?.uid
+        if (userId != null) {
+            dbFirestore.collection("usuarios").document(userId).collection("favoritosPlayas")
+                .document(ciudad.id_ciudad)
+                .delete()
+                .addOnSuccessListener {
+                    Toast.makeText(this, "Playa eliminada de favoritos", Toast.LENGTH_SHORT).show()
+                }
+                .addOnFailureListener { exception ->
+                    // Manejar errores al eliminar la ciudad favorita
+                    Toast.makeText(
+                        this,
+                        "Error al eliminar de favoritos: ${exception.message}",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
+        } else {
+            Toast.makeText(this, "Usuario no autenticado", Toast.LENGTH_SHORT).show()
+        }
+    }
+}
