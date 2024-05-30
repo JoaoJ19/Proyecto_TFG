@@ -7,10 +7,10 @@ Mi proyecto está desarrollado y funcional en una aplicación móvil diseñada p
 EcuaTour se erige como una guía turística esencial para explorar Ecuador, un país rico en diversidad y belleza natural. Con una interfaz amigable y recursos interactivos, EcuaTour está diseñada para satisfacer las necesidades tanto de turistas como de locales, proporcionando información detallada y actualizada sobre destinos, playas y restaurantes. Esta aplicación busca enriquecer y facilitar la experiencia de viaje, fomentando un mayor disfrute y conexión con la cultura y naturaleza ecuatoriana
 
 # Características importantes
-- ❤️ Organización de lugares: Con la opción de poder agregar tus sitios favoritos para que no tengas que volver a buscar en toda la aplicación con la curiosidad de saber dónde está guardándolo en la cuenta activa sin pérdida de datos.
-- 🌏 Guías Interactivas: Obtén información detallada y actualizada sobre los principales destinos turísticos de Ecuador. Cada guía incluye datos históricos, culturales y consejos prácticos para aprovechar al máximo tu visita.
-- 🔐 Acceso a la aplicación: Crea una cuenta en EcuaTour para acceder a todas las funcionalidades de la aplicación. El proceso de registro es rápido y sencillo, y puedes utilizar tu correo electrónico y una contraseña tanto para registrarte como para iniciar sesión.
-- 👔 Perfil de Usuario: Visualiza tu perfil con información relevante como tu nombre, correo electrónico y la contraseña con la que accedes.
+- ❤️ **Organización de lugares:** Con la opción de poder agregar tus sitios favoritos para que no tengas que volver a buscar en toda la aplicación con la curiosidad de saber dónde está guardándolo en la cuenta activa sin pérdida de datos.
+- 🌏 **Guías Interactivas:** Obtén información detallada y actualizada sobre los principales destinos turísticos de Ecuador. Cada guía incluye datos históricos, culturales y consejos prácticos para aprovechar al máximo tu visita.
+- 🔐 **Acceso a la aplicación:** Crea una cuenta en EcuaTour para acceder a todas las funcionalidades de la aplicación. El proceso de registro es rápido y sencillo, y puedes utilizar tu correo electrónico y una contraseña tanto para registrarte como para iniciar sesión.
+- 👔 **Perfil de Usuario:** Visualiza tu perfil con información relevante como tu nombre, correo electrónico y la contraseña con la que accedes.
 
 # Guía de la aplicación
 ### - Iniciar Sesión o Crear tu cuenta
